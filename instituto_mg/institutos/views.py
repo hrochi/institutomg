@@ -1,28 +1,27 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from institutos.models import Curso
+from institutos.models import Curso, Profesor, Estudiante, Entregable
 from django.template import loader
 from datetime import datetime
 
 # Create your views here.
 
-def lista_cursos(request):
+def incio(request):
 
-    cursos = Curso.objects.all()
+    return render(request, "institutos/index.html")
 
-    lista_cursos_nombres = []
+def cursos(request):
 
-    for curso in cursos:
-        lista_cursos_nombres.append(curso.nombre)
+    return HttpResponse('vista cursos')
 
-    return HttpResponse(lista_cursos_nombres)
+def profesores(request):
 
-def index(self):
+    return HttpResponse('vista profesores')
 
-    datos_contexto={"fecha_actual": datetime.now, "username": "gerson"}
+def estudiantes(request):
 
-    plantilla = loader.get_template("index.html")
+    return HttpResponse('vista estudiantes')
 
-    documento= plantilla.render(datos_contexto)
+def entregables(request):
 
-    return HttpResponse(documento)
+    return HttpResponse('vista entregables')
