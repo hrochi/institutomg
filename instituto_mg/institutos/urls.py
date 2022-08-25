@@ -2,9 +2,13 @@ from django.urls import path
 from institutos.views import *
 
 urlpatterns = [
-    path("", incio),
-    path("estudiantes/",estudiantes),
-    path("profesores/", profesores),
-    path("cursos/", cursos),
-    path("entregables", entregables)
+    path("", incio, name='inicio'),
+    path("comentarios/", comentarios, name='comentarios'),
+    path("fisica/", fisica, name= 'fisica'),
+    path("quimica/", quimica, name= 'quimica'),
+    path("matematica/", matematica, name= 'matematica'),
+    path("perfil/", usuario, name='perfil'),
+    path("campus/", campus, name='mis cursos'),
+    path("login/", login, name='login'),
+    path("cursos/", cursos, name='info cursos'),
 ]

@@ -10,18 +10,34 @@ def incio(request):
 
     return render(request, "institutos/index.html")
 
+def comentarios(request):
+
+    return render(request, "institutos/comentarios.html")
+
 def cursos(request):
 
-    return HttpResponse('vista cursos')
+    return render(request, "institutos/cursos.html")
 
-def profesores(request):
+def campus(request):
 
-    return HttpResponse('vista profesores')
+    return render(request, "institutos/campus.html")
 
-def estudiantes(request):
+def usuario(request):
 
-    return HttpResponse('vista estudiantes')
+    return render(request, "institutos/usuario.html")
 
-def entregables(request):
+def fisica(request):
 
-    return HttpResponse('vista entregables')
+    return render(request, "institutos/fisica.html")
+
+def quimica(request):
+
+    return render(request, "institutos/quimica.html")
+
+def matematica(request):
+
+    return render(request, "institutos/matematica.html")
+
+def login(request):
+
+    return render(request, "institutos/iniciar_sesion.html")
