@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Create your views here.
 
-def incio(request):
+def inicio(request):
 
     return render(request, "institutos/index.html")
 

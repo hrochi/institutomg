@@ -2,7 +2,7 @@ from django.urls import path
 from institutos.views import *
 
 urlpatterns = [
-    path("", incio, name='inicio'),
+    path("", inicio, name='inicio'),
     path("comentarios/", comentarios, name='comentarios'),
     path("fisica/", fisica, name= 'fisica'),
     path("quimica/", quimica, name= 'quimica'),
