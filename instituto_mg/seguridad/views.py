@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 def iniciar_sesion (request):
     if request.method == "GET":
         formulario = AuthenticationForm()
-        return render (request, "seguridad/index.html", {"formulario": formulario})
+        return render (request, "institutos/index.html", {"formulario": formulario})
     else:
         formulario = AuthenticationForm (request, data=request.POST)
         
@@ -34,4 +34,4 @@ def registrar_usuario (request):
         if formulario.is_valid():
             formulario.save()
             
-    return redirect ("institutos/base.html")
+    return redirect ("inicio")
