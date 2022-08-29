@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from institutos.models import Curso, Profesor, Estudiante, Entregable
 from django.template import loader
 from datetime import datetime
+from institutos.forms import Comentarios
 
 # Create your views here.
 
@@ -11,8 +12,22 @@ def inicio(request):
     return render(request, "institutos/index.html")
 
 def comentarios(request):
+    
+    if request.method == "GET":
+        formulario = Comentarios()
+    
+        
+        return render (request, "institutos/prueba.html", {"formulario": formulario} )
+    else:
+        nombre = request.post["nombre"]
+        
+        return render(request, "institutos/cursos.html")
+
+
+ 
 
     return render(request, "institutos/comentarios.html")
+
 
 def cursos(request):
 

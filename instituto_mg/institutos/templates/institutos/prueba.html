@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+
+        {{formulario.as_table}}
+        <form name="form1" id="form1" action="/action_page.php">
+            Valoracion: <select name="subject" id="subject">
+              <option value="" selected="selected">Regular</option>
+              <option value="" selected="selected">Malo</option>
+              <option value="" selected="selected">Bueno</option>
+              <option value="" selected="selected">Muy bueno</option>
+              <option value="" selected="selected">Excelente</option>
+            </select>
+            <br><br>
+            Curso: <select name="topic" id="topic">
+              <option value="" selected="selected">Quimica</option>
+              <option value="" selected="selected">Matematica</option>
+              <option value="" selected="selected">Biofisica</option>
+            </select>
+            <br><br>
+            Modalidad: <select name="chapter" id="chapter">
+                <option value="" selected="selected">UBA XXI</option>
+                <option value="" selected="selected">UBA CBC</option>
+
+              </select>
+              <br><br>
+                       
+          </form>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>

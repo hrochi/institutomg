@@ -30,3 +30,9 @@ class Entregable(models.Model):
     nombre = models.CharField(max_length=30)
     fechaDeEntrega = models.DateField()
     entregado = models.BooleanField()
+
+class Comentario(models.Model):
+    Tu_nombre = models.CharField(max_length=30)
+    Seleccionar_curso = models.DateField()
+    Valoracion = models.BooleanField()
+    Tu_comentario = models.BooleanField()
